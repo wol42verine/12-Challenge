@@ -154,6 +154,27 @@ const getEmployeesByManager = async (manager_id) => {
   }
 };
 
+const deleteDepartment = async (departmentId) => {
+  const query = 'DELETE FROM departments WHERE id = $1';
+  const values = [departmentId];
+  const res = await pool.query(query, values);
+  return res;
+};
+
+const deleteRole = async (roleId) => {
+  const query = 'DELETE FROM roles WHERE id = $1';
+  const values = [roleId];
+  const res = await pool.query(query, values);
+  return res;
+};
+
+const deleteEmployee = async (employeeId) => {
+  const query = 'DELETE FROM employees WHERE id = $1';
+  const values = [employeeId];
+  const res = await pool.query(query, values);
+  return res;
+};
+
 module.exports = {
   getAllDepartments,
   getAllRoles,
@@ -165,4 +186,8 @@ module.exports = {
   updateEmployeeRole,
   updateEmployeeManager,
   getEmployeesByManager,
+  deleteDepartment,
+  deleteRole,
+  deleteEmployee, // Make sure deleteEmployee is exported
 };
+
