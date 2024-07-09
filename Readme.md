@@ -58,7 +58,7 @@ Before running the application, ensure your PostgreSQL database is set up:
 
 ## Demo
 
-[![Watch the video](https://example.com/path_to_thumbnail_image.png)](https://example.com/path_to_video.mp4)
+[![Watch the video](Demo.gif)]
 
 
 ## Contributing
